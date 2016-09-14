@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="node_modules\bootstrap\dist\css\bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules\bootstrap\myFolder\myCss\myStyle.css">
+    <script src="node_modules\angular\angular.min.js"></script>
+  </head>
+  <body ng-app="myApp">
+    <div class="container" ng-controller="ctrl">
+
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-brand">NoteBook</div>
+        <div>
+          <ul class="nav navbar-nav">
+            <li><a href="#">Create Note</a></li>
+            <li><a href="#">Display Notes</a></li>
+          </ul>
+          <ul class="nav navbar-nav pull-right">
+            <li><a href="#">Logout</a></li>
+          </ul>
+        </div>
+      </nav>
+
+        <div class="transparent">
+          <form class="column">
+               <div class="form-group">
+                  <label>Title</label>
+                  <input class="form-control" type="text" ng-model="title">
+               </div>
+               <div class="form-group">
+                 <label>Description</label>
+                 <textarea class="form-control" row="100" type="text" ng-model="description"></textarea>
+               </div>
+               <div class="pull-right">
+                 <button type="submit" class="btn btn-md btn-default" ng-click="save(title,description);">Save</button>
+               </div>
+         </form>
+        </div>
+      </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="node_modules\bootstrap\dist\js\bootstrap.min.js"></script>
+    <script src="node_modules\bootstrap\myFolder\myJs\myScript.js"></script>
+  </body>
+</html>
